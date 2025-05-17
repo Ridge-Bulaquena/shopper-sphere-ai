@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StrictMode } from "react";
 import Index from "./pages/Index";
 import Store from "./pages/Store";
+import VirtualStoreView from "./pages/VirtualStoreView";
 import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 
@@ -24,6 +25,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/store" element={<Store />} />
+              <Route path="/virtual-store" element={<VirtualStoreView />} />
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

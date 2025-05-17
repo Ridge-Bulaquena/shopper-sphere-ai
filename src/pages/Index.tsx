@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import LandingScene from '@/components/LandingScene';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShoppingBag, Globe, Sparkles } from 'lucide-react';
+import { ArrowRight, ShoppingBag, Globe, Sparkles, Cube } from 'lucide-react';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ const Index = () => {
           </motion.p>
           
           <motion.div 
-            className="mt-8 space-y-6 md:space-y-0 md:space-x-4 flex flex-col md:flex-row items-center"
+            className="mt-8 space-y-6 md:space-y-0 md:flex items-center gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 1 }}
@@ -58,8 +58,18 @@ const Index = () => {
               className="bg-shopsphere-primary hover:bg-shopsphere-secondary text-white group"
               onClick={() => navigate('/store')}
             >
-              Enter Virtual Store <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              Enter Store <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
+            
+            <Button 
+              size="lg" 
+              variant="secondary"
+              className="bg-shopsphere-accent text-white hover:bg-shopsphere-accent/90 group"
+              onClick={() => navigate('/virtual-store')}
+            >
+              <Cube className="mr-2" /> 3D Virtual Store
+            </Button>
+            
             <Button 
               size="lg" 
               variant="outline" 
