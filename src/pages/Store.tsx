@@ -7,7 +7,7 @@ import ProductCard from '@/components/ProductCard';
 import NavigationControls from '@/components/NavigationControls';
 import StoreHeader from '@/components/StoreHeader';
 import { Product } from '@/types/product';
-import { ArrowLeft, Box3D } from 'lucide-react';
+import { ArrowLeft, Box } from 'lucide-react';
 import { toast } from "sonner";
 import { products } from '@/data/products';
 
@@ -83,7 +83,7 @@ const Store = () => {
             className="bg-shopsphere-primary/30 backdrop-blur-sm text-white border-shopsphere-primary/30 hover:bg-shopsphere-primary/50"
             onClick={() => navigate('/virtual-store')}
           >
-            <Box3D size={16} className="mr-2" /> Try 3D Store
+            <Box size={16} className="mr-2" /> Try 3D Store
           </Button>
         </div>
         
