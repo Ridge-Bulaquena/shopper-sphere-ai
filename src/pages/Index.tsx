@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import LandingScene from '@/components/LandingScene';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShoppingBag, Globe, Sparkles, Cube } from 'lucide-react';
+import { ArrowRight, ShoppingBag, Globe, Sparkles, Box3D } from 'lucide-react';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -67,7 +67,7 @@ const Index = () => {
               className="bg-shopsphere-accent text-white hover:bg-shopsphere-accent/90 group"
               onClick={() => navigate('/virtual-store')}
             >
-              <Cube className="mr-2" /> 3D Virtual Store
+              <Box3D className="mr-2" /> 3D Virtual Store
             </Button>
             
             <Button 
