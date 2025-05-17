@@ -111,7 +111,7 @@ const VirtualStore: React.FC<VirtualStoreProps> = ({ onProductSelect, products, 
     scene.add(rightWall);
     
     // Product displays - simplified cubes for now
-    const productObjects: { [key: string]: THREE.Mesh } = {};
+    const productObjects: { [key: string]: THREE.Object3D } = {};
     
     products.forEach(product => {
       // Product stand
@@ -346,7 +346,9 @@ const VirtualStore: React.FC<VirtualStoreProps> = ({ onProductSelect, products, 
         
         // Find the product ID that matches the clicked object
         for (const [productId, object] of Object.entries(productObjects)) {
-          if (object === clickedObject || (object as THREE.Group).children?.includes(clickedObject)) {
+          // Check if object is the clicked object or if clicked object is a child of a group
+          if (object === clickedObject || 
+              (object instanceof THREE.Group && object.children.includes(clickedObject))) {
             onProductSelect(productId);
             break;
           }
